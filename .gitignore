@@ -1,8 +1,8 @@
+.idea
+*.DS_Store
 /vendor
-composer.phar
+/coverage
+sftp-config.json
 composer.lock
-.DS_Store
-/phpunit.xml
-/.idea
-/.vscode
-.phpunit.result.cache
+.subsplit
+.php_cs.cache

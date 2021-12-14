@@ -1,0 +1,19 @@
+{
+    "name": "sakurairo/framework",
+    "description": "The sakurairo Framework.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "青岚",
+            "email": "aoyamakiri@networkos.club"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sakurairo\\Framework\\": "src"
+        }
+    }
+}
