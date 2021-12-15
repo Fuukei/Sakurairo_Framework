@@ -1,6 +1,7 @@
 <?php
 
 use Sakurairo\Container\Container;
+use Sakurairo\Http\Http;
 
 if (!function_exists('app')) {
     function app($abstract = null, array $parameters = [])
@@ -10,5 +11,12 @@ if (!function_exists('app')) {
         }
 
         return Container::getInstance()->make($abstract, $parameters);
+    }
+}
+
+if (!function_exists('http')) {
+    function http(object $client = null)
+    {
+        return new Http($client);
     }
 }

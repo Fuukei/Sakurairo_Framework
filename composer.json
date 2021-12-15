@@ -10,7 +10,8 @@
     ],
     "require": {
         "php": "^8.0",
-        "illuminate/container": "^8.76"
+        "illuminate/container": "^8.76",
+        "guzzlehttp/guzzle": "^7.4"
     },
     "autoload": {
         "files": [
