@@ -10,9 +10,12 @@
     ],
     "require": {
         "php": "^8.0",
-        "psr/container": "^2.0"
+        "illuminate/container": "^8.76"
     },
     "autoload": {
+        "files": [
+            "src/Sakurairo/Helper/Helpers.php"
+        ],
         "psr-4": {
             "Sakurairo\\": "src/Sakurairo/"
         }

@@ -2,8 +2,6 @@
 
 namespace Sakurairo\Tests\Container;
 
-use Sakurairo\Container\Container;
-
 require __DIR__.'/../../vendor/autoload.php';
 
 class A
@@ -15,32 +13,15 @@ class B
 {
     protected $count = 1;
 
-    public function __construct(A $a, $count)
+    public function __construct(A $a)
     {
-        $this->count = $a->count + $count;
+        $this->count = $a->count;
     }
 
     public function getCount()
     {
-        return $this->count;
+        return $this->count + 10;
     }
 }
 
-class C {
-    protected $c;
-
-    public function __construct () {
-        return 'c';
-    }
-}
-
-$container = new Container;
-
-// $b = $container->make(B::class, [100]);
-// var_dump($b->getCount());
-
-$res = $container->bind('a',function($container){
-    return new C;
-});
-var_dump($res);
-
+var_dump(app(B::class)->getCount());
